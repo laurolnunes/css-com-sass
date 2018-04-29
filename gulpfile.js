@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
 
 // Variáveis para reutilização
-var scssFiles = './source/scss/**/*.scss',
+var scssFiles = ['./source/**/*.scss', './source/**/**/*.scss'],
     htmlFiles = './source/*.html'
     cssDest   = './dist/css';
     htmlDest  = './dist'

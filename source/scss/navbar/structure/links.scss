@@ -1,0 +1,19 @@
+.navbar-nav 
+{
+    li
+    {
+        @extend %theme;
+        &:hover{
+            @if $theme == "dark"
+            {
+                background-color:  #fff;
+                color: #000;
+            }
+            @else
+            {
+                background-color:  #000;
+                color: #fff;
+            }
+        }
+    }
+}

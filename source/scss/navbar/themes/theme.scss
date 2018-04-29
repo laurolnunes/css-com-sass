@@ -1,0 +1,34 @@
+@mixin nav-theme ($navbar-bg, $navbar-color, $navbar-border){
+	background: $navbar-bg;
+	color: $navbar-color;
+	border: $navbar-border;
+}
+
+%dark-theme
+{
+    font-weight: bold;
+}
+%theme
+{
+    @if $theme == "dark"    {
+        @include nav-theme(#000, #fff, none);
+    }
+    @else{
+        @include nav-theme(#fff, #000, none)
+    }
+}
+@if $theme == "dark"
+{
+    .container
+    {
+        @include nav-theme(#000, #fff, none);
+        @extend %dark-theme;
+    }
+}
+@else 
+{
+    .container
+    {
+        @include nav-theme(#fff, #000, none)
+    }
+}
